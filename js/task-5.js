@@ -26,3 +26,15 @@ function checkStorage(storage, item) {
 }
 console.log(checkStorage(['apple', 'banana', 'orange'], 'banana')); // 'banana is awalable to order!'
 console.log(checkStorage(['apple', 'banana', 'orange'], 'grape')); // 'Sorry, grape is out of stock.'
+
+function getCommonElements(array1, array2) {
+    const commonElements = [];
+    for (const element of array1) {
+        if (array2.includes(element)) {
+            commonElements.push(element);
+        }
+        }   return commonElements;
+    }   
+
+console.log(getCommonElements([1, 2, 3], [2, 4])); // [2]
+console.log(getCommonElements(['apple', 'banana', 'orange'], ['banana', 'kiwi', 'apple'])); // ['apple', 'banana']      
