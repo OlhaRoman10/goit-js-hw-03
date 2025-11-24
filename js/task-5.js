@@ -15,3 +15,14 @@ function createArrayofNumbers(min, max) {
 }
 console.log(createArrayofNumbers(1, 3)); // [1, 2, 3]
 console.log(createArrayofNumbers(14, 17)); // [14, 15, 16, 17]
+
+function checkStorage(storage, item) {
+    const lowerCaseItem = item.toLowerCase();
+    if (storage.includes(lowerCaseItem)) {
+        return '${item} is awalable to order!';
+    } else {
+        return 'Sorry, ${item} is out of stock.';   
+    }
+}
+console.log(checkStorage(['apple', 'banana', 'orange'], 'banana')); // 'banana is awalable to order!'
+console.log(checkStorage(['apple', 'banana', 'orange'], 'grape')); // 'Sorry, grape is out of stock.'
